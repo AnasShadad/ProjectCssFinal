@@ -1,0 +1,273 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header header header header"
+        "title title title title"
+        "about about about about"
+        "services services services services"
+        "projects projects projects projects"
+        "footer footer footer footer";
+    grid-template-columns: repeat(4, 1fr);
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.skip {
+    padding: 0 40px;
+    position: absolute;
+    left: 0;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s, color 0.3s;
+
+
+
+
+}
+
+.skip:hover {
+    top: 0;
+    color: #000;
+    opacity: 1;
+
+}
+
+.header {
+    grid-area: header;
+    background-color: white;
+
+}
+
+.header .header-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    min-height: 75px;
+}
+
+.header .header-cont a {
+    flex-grow: 3;
+    flex-shrink: 3;
+
+
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.header a:hover span {
+    color: coral;
+}
+
+.header nav {
+    width: 70%;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+
+
+}
+
+.header nav ul li a {
+    font-size: 2rem;
+    font-weight: 500;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.header nav ul li a:hover {
+    color: white;
+    padding: 6px 16px;
+    background-color: coral;
+}
+
+/* end header */
+.title {
+    grid-area: title;
+    height: 50vh;
+    background: url('../images/lemons.jpg') center center no-repeat;
+    background-size: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.title h2 {
+    text-transform: uppercase;
+    font-size: 4rem;
+}
+
+/* end title */
+
+.about {
+    grid-area: about;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    max-width: var(--max-width-size);
+    margin: 0 auto;
+}
+
+.about .image {
+    height: 100%;
+    width: 100%;
+}
+
+.about .image.right {
+    background: url('../images/bridge.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+
+.about .item {
+    padding: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.about .item h3 {
+    font-weight: 700;
+    font-size: 4rem;
+}
+
+.about .item p {
+    font-size: 1.8rem;
+    margin: 30px 0;
+    font-weight: 400;
+}
+
+.projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    background-color: blanchedalmond;
+}
+
+.project img {
+    height: 98%;
+    transition: 0.3s ease-in-out;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    background-color: lightgreen;
+    flex-direction: column;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.footer h4 {
+    font-weight: 700;
+    font-size: 3rem;
+    animation-name: colorful;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    display: inline-block;
+}
+
+.footer .social i {
+    font-size: 2rem;
+}
+
+.footer .social a:hover {
+    color: #fff;
+    transition: 0.3s;
+}
+
+.footer .social a {
+    margin: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.services {
+    grid-area: services;
+
+
+}
+
+.dflex {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/* images page sarvece */
+.service {
+
+    width: 300px;
+    padding: 0px;
+    height: 400px;
+    margin-top: 0px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    border: #000 solid 5px;
+    border-radius: 10px 30px 30px 10px;
+
+
+}
+
+.dflex a:nth-child(even) {
+    border-right: rgb(190, 4, 4) solid 5px;
+    border-radius: 10px 30px 30px 10px;
+    padding: 0;
+    margin: 0;
+}
+.dflex a:nth-child(odd) {
+    border-left: rgb(190, 4, 4) solid 5px;
+    border-radius: 10px 30px 30px 10px;
+    padding: 0;
+    margin: 0;
+}
+
+a .service:hover {
+    border-radius: 50px;
+    width: 350px;
+    border-color: blue;
+
+}
